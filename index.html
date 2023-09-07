@@ -12,15 +12,19 @@
 
     <div class="grid-container"></div>
 
-    <div class="slider">
-        <input type="range" id="board-size" name="board-size" min="0" max="80" value="40">
-        <label></label>
-        <label for="board-size">Board Size</label>
+    <div class="options">
+        <div class="slider">
+            <input type="range" id="board-size" name="board-size" min="0" max="80" value="40">
+            <label for="board-size">Board Size</label>
+        </div>
+    
+        <div class="choose-color">
+            <input type="color" id="color" name="color" value="#000000">
+            <label for="color">Color</label>
+        </div>
+    
+        <button class="clear-button">Clear</button>
     </div>
     
-    <button class="clear-button">Clear</button>
-
-    <button class="random-color-button">Random</button>
-
 </body>
 </html>

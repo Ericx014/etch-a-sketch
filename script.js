@@ -30,14 +30,21 @@ function createGrid(size) {
     }
 }
 
+const chooseColor = document.getElementById("color");
+chooseColor.addEventListener('input', changeColor);
+
+// Function to apply color on board
 function changeColor(e) {
     if (e.type === 'mouseover' && !mouseDown) return;
     
-    if (e.type === 'mouseover' && mouseDown) {
-        e.target.style.backgroundColor = 'black';
+    if ((e.type === 'mouseover' && mouseDown) || (e.type === 'mouseclick')){
+        const selectedColor = document.getElementById("color");
+        e.target.style.backgroundColor = selectedColor.value;
+        console.log(selectedColor.value);
     }
 }
 
+// Action listener for clear button
 const clearButton = document.querySelector(".clear-button");
 clearButton.addEventListener('click', () => {
     const allSquare = document.querySelectorAll(".square");
@@ -46,27 +53,14 @@ clearButton.addEventListener('click', () => {
     });
 });
 
-// const randomColorButton = document.querySelector(".random-color-button");
-// randomColorButton.addEventListener('Click', () => {
-
-// })
-
-// function modeSelector() {
-//     randomColorButton.addEventListener('Click', () => {
-//         mode = 'randomColor';
-//     })
-// }
-
-// function changeColor(){
-    
-// }
-
+// Allows slider to change board size
 const boardSizeSlider = document.getElementById("board-size");
 boardSizeSlider.addEventListener ('input', () => {
     const boardSizeSliderValue = boardSizeSlider.value;
     createGrid(boardSizeSliderValue);
 })
 
+// Default
 window.onload = () => {
     createGrid(DEFAULT_SIZE);
 }
