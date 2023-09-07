@@ -30,22 +30,6 @@ function createGrid(size) {
     }
 }
 
-// Action listener for button
-// Button to adjust grid size
-const adjustGridButton = document.querySelector('.adjust-grid-button');
-adjustGridButton.addEventListener('click', () => {
-    
-    const squarePerSide = prompt("Enter number of squares per side: ");
-
-    if ((squarePerSide > 0) && (squarePerSide <= 100)){
-        createGrid(squarePerSide);
-        container.style.gridTemplateColumns = `repeat(${squarePerSide}, 1fr)`;
-    } else {
-        alert('Please enter a number from 1 to 100 only.');
-    }
-   
-})
-
 function changeColor(e) {
     if (e.type === 'mouseover' && !mouseDown) return;
     
