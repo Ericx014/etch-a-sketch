@@ -36,11 +36,9 @@ chooseColor.addEventListener('input', changeColor);
 // Function to apply color on board
 function changeColor(e) {
     if (e.type === 'mouseover' && !mouseDown) return;
-    
-    if ((e.type === 'mouseover' && mouseDown) || (e.type === 'mouseclick')){
+    if (e.type === 'mouseover' && mouseDown){
         const selectedColor = document.getElementById("color");
         e.target.style.backgroundColor = selectedColor.value;
-        console.log(selectedColor.value);
     }
 }
 
