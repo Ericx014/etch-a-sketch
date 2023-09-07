@@ -77,7 +77,12 @@ clearButton.addEventListener('click', () => {
     
 // }
 
+const boardSizeSlider = document.getElementById("board-size");
+boardSizeSlider.addEventListener ('input', () => {
+    const boardSizeSliderValue = boardSizeSlider.value;
+    createGrid(boardSizeSliderValue);
+})
+
 window.onload = () => {
     createGrid(DEFAULT_SIZE);
 }
-

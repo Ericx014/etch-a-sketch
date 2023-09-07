@@ -31,3 +31,15 @@ button {
     box-shadow: 1px 1px 1px 1px rgba(74, 72, 72, 0.5);
 }
 
+.slider {
+    display: inline-block;
+}
+
+/* Not done yet */
+.slider input[type="range"]{
+    appearance: none;
+    height: 5px;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid black;
+}
