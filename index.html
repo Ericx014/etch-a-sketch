@@ -14,15 +14,18 @@
 
     <div class="options">
         <div class="slider">
-            <input type="range" id="board-size" name="board-size" min="0" max="80" value="40">
-            <label for="board-size">Board Size</label>
+            <div class="size-value">16 x 16</div>
+            <input type="range" class="board-size-slider" name="board-size" min="0" max="80" value="16">
         </div>
     
-        <div class="choose-color">
-            <input type="color" id="color" name="color" value="#000000">
+        <div class="color-section">
+            <input type="color" class="color-selector" name="color" value="#000000">
             <label for="color">Color</label>
         </div>
         
+        <button class="color-mode-button">Color</button>
+        <button class="random-mode-button">Random</button>
+        <button class="eraser-mode-button">Eraser</button>
         <button class="clear-button">Clear</button>
     </div>
 
