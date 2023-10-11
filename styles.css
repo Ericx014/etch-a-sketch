@@ -13,14 +13,7 @@ body {
     border: 1px solid black;
 }
 
-.square {
-    width: auto;
-    height: auto;
-    margin: 0;
-    padding: 0;
-}
-
-.square:hover {
+.grid-element:hover {
     background-color: lightgrey;
 }
 
